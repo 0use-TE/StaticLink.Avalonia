@@ -72,7 +72,18 @@ For macOS, also reference `StaticLink.Avalonia.Native`. This package contains `l
 Add only the `StaticLink.Avalonia.Native` reference matching your Avalonia version.
 
 ## Publish
-
+powershell
+``` bash
+dotnet publish -c Release -r win-x64 -p:PublishAot=true -p:SelfContained=true -p:PublishSingleFile=true -p:StripSymbols=true
+```
+``` bash
+dotnet publish -c Release -r win-x64 `
+  -p:PublishAot=true `
+  -p:SelfContained=true `
+  -p:PublishSingleFile=true `
+  -p:StripSymbols=true
+```
+bash
 ```bash
 dotnet publish -c Release -r win-x64 \
   -p:PublishAot=true \
