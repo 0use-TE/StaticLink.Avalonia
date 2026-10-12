@@ -38,24 +38,11 @@ Add only the `StaticLink.Avalonia.Native` reference matching your Avalonia versi
 On macOS, only Avalonia 12 with skia3/4 supports Metal. Avalonia 11 fully static apps must use OpenGL or Software because its Metal path dynamically loads `libSkiaSharp`.
 
 ## Publish
-powershell
-``` bash
-dotnet publish -c Release -r win-x64 -p:PublishAot=true -p:SelfContained=true -p:PublishSingleFile=true -p:StripSymbols=true
-```
-``` bash
-dotnet publish -c Release -r win-x64 `
-  -p:PublishAot=true `
-  -p:SelfContained=true `
-  -p:PublishSingleFile=true `
-  -p:StripSymbols=true
-```
-bash
+
 ```bash
 dotnet publish -c Release -r win-x64 -p:PublishAot=true
 ```
-
 Use the RID you need, such as `win-x86`, `linux-x64`, `linux-arm64`, `osx-arm64`, or `osx-x64`.
-
 
 ## Native Package Automation
 
